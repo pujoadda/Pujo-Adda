@@ -1,0 +1,39 @@
+{
+  "name": "pujo-adda",
+  "private": true,
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~6.1.2",
+    "expo": "~54.0.0",
+    "expo-av": "~16.0.8",
+    "expo-location": "~19.0.1",
+    "expo-status-bar": "~3.0.9",
+    "firebase": "^12.18.0",
+    "framer-motion": "^11.0.8",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.344.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-native": "0.81.5",
+    "react-native-web": "^0.21.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/leaflet": "^1.9.8",
+    "@types/react": "~19.1.10",
+    "@types/react-dom": "~19.1.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "babel-preset-expo": "~54.0.12",
+    "vite": "^5.1.6"
+  }
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#881337" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle with Glow -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-opacity="0.4" stroke-dasharray="12 6" />
+
+  <!-- Diya / Festive Lamp & Crown Symbol -->
+  <g transform="translate(256, 250)">
+    <!-- Base Lotus / Decorative Flames -->
+    <path d="M -120 40 Q 0 140 120 40 Q 70 80 0 85 Q -70 80 -120 40 Z" fill="url(#goldGrad)" />
+    
+    <!-- Central Diya Bowl -->
+    <path d="M -90 20 C -70 90 70 90 90 20 Z" fill="url(#redGrad)" stroke="#fef08a" stroke-width="3" />
+    
+    <!-- Flames (Third Eye / Trishul Motif) -->
+    <!-- Center Flame -->
+    <path d="M 0 15 C 25 -30 35 -90 0 -140 C -35 -90 -25 -30 0 15 Z" fill="url(#goldGrad)" />
+    <path d="M 0 0 C 15 -25 20 -65 0 -100 C -20 -65 -15 -25 0 0 Z" fill="#ffffff" opacity="0.9" />
+    
+    <!-- Side Flame Left -->
+    <path d="M -30 25 C -55 -15 -85 -55 -70 -100 C -45 -65 -35 -20 -30 25 Z" fill="url(#goldGrad)" opacity="0.85" />
+    
+    <!-- Side Flame Right -->
+    <path d="M 30 25 C 55 -15 85 -55 70 -100 C 45 -65 35 -20 30 25 Z" fill="url(#goldGrad)" opacity="0.85" />
+    
+    <!-- Sparkles -->
+    <circle cx="-130" cy="-60" r="8" fill="#fef08a" />
+    <circle cx="130" cy="-60" r="8" fill="#fef08a" />
+    <circle cx="0" cy="-160" r="10" fill="#ffffff" />
+  </g>
+</svg>
