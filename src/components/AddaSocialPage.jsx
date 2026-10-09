@@ -376,7 +376,13 @@ export default function AddaSocialPage({ user, onOpenAuth }) {
 
             {/* Messages Feed */}
             <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {chatMessages.map((msg, index) => {
+              {!activeChatUser ? (
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', textAlign: 'center' }}>
+                  <MessageSquare size={48} style={{ marginBottom: '12px', opacity: 0.5 }} />
+                  <h4 style={{ color: 'var(--text-primary)', margin: '0 0 4px' }}>No Chat Conversation Selected</h4>
+                  <p style={{ fontSize: '0.82rem', margin: 0 }}>Select a member from the left panel or add friends to start chatting!</p>
+                </div>
+              ) : chatMessages.map((msg, index) => {
                 const isMe = user && (msg.senderId === user.uid || msg.senderName === user.name || msg.sender === 'You' || msg.sender === user.name);
 
                 return (
@@ -419,9 +425,10 @@ export default function AddaSocialPage({ user, onOpenAuth }) {
               <input
                 type="text"
                 className="form-input"
-                placeholder={user ? `Message ${activeChatUser.name}...` : 'Login to start chatting...'}
+                placeholder={user && activeChatUser ? `Message ${activeChatUser.name}...` : user ? 'Select a member to chat...' : 'Login to start chatting...'}
                 value={inputChatText}
                 onChange={(e) => setInputChatText(e.target.value)}
+                disabled={!activeChatUser}
                 style={{ flex: 1, fontSize: '0.88rem', padding: '12px 16px', borderRadius: '24px' }}
               />
 
