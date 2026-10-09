@@ -155,7 +155,7 @@ export default function HomePage({ onNavigateTab, onSelectFestival, onOpenAuth, 
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center' }}>
           <button
-            onClick={() => onNavigateTab('pandals')}
+            onClick={() => onNavigateTab('map')}
             className="pill-action-btn under-shadow-glow"
             style={{
               padding: '12px 24px',
@@ -170,7 +170,7 @@ export default function HomePage({ onNavigateTab, onSelectFestival, onOpenAuth, 
               boxShadow: '0 12px 30px -5px rgba(225, 29, 72, 0.45)'
             }}
           >
-            <Compass size={18} /> Explore All Pandals & Interactive Map →
+            <MapPin size={18} /> Explore Interactive Map & Routes →
           </button>
 
           <button

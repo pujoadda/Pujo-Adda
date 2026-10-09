@@ -7,6 +7,9 @@ export default function DirectionsDrawer({
   allRoutes = [],
   activeRouteId = 'shortest',
   onSelectRoute,
+  isNavigating = false,
+  onStartNavigation,
+  onStopNavigation,
   onClose
 }) {
   const [travelMode, setTravelMode] = useState('transit'); // 'best' | 'drive' | 'bike' | 'transit' | 'walk'
@@ -132,23 +135,65 @@ export default function DirectionsDrawer({
             {activeRouteObj.departs} • 🚶 {activeRouteObj.walk} • {activeRouteObj.freq}
           </p>
 
-          {/* Add to Calendar Button */}
-          <button style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            marginTop: '12px',
-            padding: '8px 16px',
-            borderRadius: '20px',
-            border: '1px solid #ceead6',
-            background: '#e6f4ea',
-            color: '#137333',
-            fontSize: '0.82rem',
-            fontWeight: '600',
-            cursor: 'pointer'
-          }}>
-            📅 Add to Calendar
-          </button>
+          {/* Add to Calendar & Live Navigation Buttons */}
+          <div style={{ display: 'flex', gap: '8px', marginTop: '12px', flexWrap: 'wrap' }}>
+            <button style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              border: '1px solid #ceead6',
+              background: '#e6f4ea',
+              color: '#137333',
+              fontSize: '0.82rem',
+              fontWeight: '600',
+              cursor: 'pointer'
+            }}>
+              📅 Add to Calendar
+            </button>
+
+            {!isNavigating ? (
+              <button
+                onClick={onStartNavigation}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '8px 16px',
+                  borderRadius: '20px',
+                  border: 'none',
+                  background: '#1a73e8',
+                  color: '#ffffff',
+                  fontSize: '0.82rem',
+                  fontWeight: '700',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(26, 115, 232, 0.3)'
+                }}
+              >
+                <Navigation size={14} /> Start Live Navigation
+              </button>
+            ) : (
+              <button
+                onClick={onStopNavigation}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '8px 16px',
+                  borderRadius: '20px',
+                  border: 'none',
+                  background: '#e11d48',
+                  color: '#ffffff',
+                  fontSize: '0.82rem',
+                  fontWeight: '700',
+                  cursor: 'pointer'
+                }}
+              >
+                <X size={14} /> Stop Navigation
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Step-by-Step Vertical Timeline (Exact Match to Screenshot) */}

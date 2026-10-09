@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   Home,
   MapPin,
+  Compass,
   Sparkles,
   Info,
   Mail,
@@ -20,7 +21,8 @@ import {
   Bot,
   Footprints,
   Sliders,
-  LogOut
+  LogOut,
+  Menu
 } from 'lucide-react';
 
 export default function Navbar({
@@ -32,27 +34,29 @@ export default function Navbar({
   onOpenAuth,
   onLogout,
   onOpenAr,
-  onOpenSos
+  onOpenSos,
+  onToggleMobileSidebar
 }) {
   const [showDrawer, setShowDrawer] = useState(false);
 
   const mainPillItems = [
     { id: 'home', label: 'Home', icon: Home },
-    { id: 'pandals', label: 'Pandals', icon: MapPin },
+    { id: 'map', label: 'Interactive Map', icon: MapPin },
+    { id: 'pandals', label: 'Pandals', icon: Compass },
     { id: 'about', label: 'About', icon: Info },
     { id: 'contact', label: 'Contact', icon: Mail }
   ];
 
   const drawerFeatures = [
+    { id: 'map', label: 'Interactive Map & Routes', icon: MapPin, cat: 'DISCOVER' },
     { id: 'festivals', label: 'All India Festivals', icon: Calendar, cat: 'DISCOVER' },
-    { id: 'pandals', label: 'Pandals & Maps', icon: MapPin, cat: 'DISCOVER' },
+    { id: 'pandals', label: 'Pandals Directory', icon: Compass, cat: 'DISCOVER' },
     { id: 'planner', label: 'Multi-Stop Route Planner', icon: Route, cat: 'PLAN' },
     { id: 'crowd', label: 'Live Crowd Status', icon: Sparkles, cat: 'PLAN' },
     { id: 'food', label: 'Food & Bhog Tracker', icon: Utensils, cat: 'PLAN' },
     { id: 'adda', label: 'Festival Adda & Partners', icon: Sliders, cat: 'CONNECT' },
     { id: 'walk', label: 'Pujo Walk (Avatar)', icon: Footprints, cat: 'EXPLORE' },
     { id: 'memories_passport', label: 'Memories & Passport', icon: BookOpen, cat: 'EXPLORE' },
-    { id: 'music', label: 'Pujo Music Player', icon: Music, cat: 'EXPLORE' },
     { id: 'ai', label: 'AI Pujo Discovery', icon: Bot, cat: 'SMART' },
     { id: 'safety', label: 'SOS Emergency Portal', icon: ShieldAlert, cat: 'SAFETY' }
   ];
@@ -79,6 +83,30 @@ export default function Navbar({
       maxWidth: 'calc(100vw - 24px)',
       boxSizing: 'border-box'
     }}>
+      {/* Sidebar Toggle Menu Button */}
+      {onToggleMobileSidebar && (
+        <button
+          onClick={onToggleMobileSidebar}
+          title="Toggle Full Navigation Menu"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            border: '1px solid var(--border-color)',
+            background: 'var(--input-bg)',
+            color: 'var(--text-primary)',
+            cursor: 'pointer',
+            transition: 'all 0.25s ease',
+            flexShrink: 0
+          }}
+        >
+          <Menu size={16} />
+        </button>
+      )}
+
       {/* Brand Logo Pill */}
       <button
         onClick={() => setActiveTab('home')}
@@ -212,15 +240,28 @@ export default function Navbar({
           width: '32px',
           height: '32px',
           borderRadius: '50%',
-          border: '1px solid var(--border-color)',
+          border: user ? '1.5px solid var(--accent-cyan)' : '1px solid var(--border-color)',
           background: user ? 'rgba(56, 189, 248, 0.2)' : 'var(--input-bg)',
           color: user ? 'var(--accent-cyan)' : 'var(--text-primary)',
           cursor: 'pointer',
           transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-          flexShrink: 0
+          flexShrink: 0,
+          overflow: 'hidden',
+          padding: 0
         }}
       >
-        <User size={16} />
+        {user && (user.photoURL || user.avatar) ? (
+          <img
+            src={user.photoURL || user.avatar}
+            alt={user.name || 'User DP'}
+            style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        ) : (
+          <User size={16} />
+        )}
       </button>
 
       {/* Dropdown Quick Features Drawer Modal overlay */}

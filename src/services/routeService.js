@@ -92,3 +92,80 @@ export function isUserOffRoute(currentCoords, routePathCoords, maxThresholdMinsK
   }
   return minDist > maxThresholdMinsKm;
 }
+
+// OSRM Real Road Routing Engine Integration
+export async function fetchRealOSRMRoute(origin, destination, mode = 'driving') {
+  if (!origin?.lat || !origin?.lng || !destination?.lat || !destination?.lng) {
+    return null;
+  }
+
+  const profile = mode === 'walking' || mode === 'walk' ? 'foot' : mode === 'bike' ? 'bike' : 'driving';
+  const url = `https://router.project-osrm.org/route/v1/${profile}/${origin.lng},${origin.lat};${destination.lng},${destination.lat}?overview=full&geometries=geojson&steps=true`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data && data.routes && data.routes.length > 0) {
+      const route = data.routes[0];
+      const coordinates = route.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
+      const distanceKm = (route.distance / 1000).toFixed(1);
+      const durationMins = Math.round(route.duration / 60);
+      const steps = route.legs[0]?.steps?.map((s) => ({
+        instruction: `${s.maneuver.type} ${s.name ? 'onto ' + s.name : ''}`,
+        distanceMeters: Math.round(s.distance)
+      })) || [];
+
+      return {
+        path: coordinates,
+        distanceKm: parseFloat(distanceKm),
+        durationMins,
+        steps
+      };
+    }
+  } catch (err) {
+    console.warn('OSRM Routing Engine notice:', err.message);
+  }
+  return null;
+}
+
+// Find Nearest Pandal by real road route distance among top candidate pandals
+export async function findTrueNearestPandal(userLocation, pandalList, mode = 'walking') {
+  if (!userLocation?.lat || !userLocation?.lng || !pandalList || pandalList.length === 0) {
+    return null;
+  }
+
+  const validPujas = pandalList.filter(
+    (p) => p.coords && typeof p.coords.lat === 'number' && typeof p.coords.lng === 'number'
+  );
+
+  if (validPujas.length === 0) return null;
+
+  // Initial filtering using straight-line Haversine distance
+  const candidatesWithStraightDist = validPujas.map((p) => {
+    const straightKm = calculateDistanceKm(userLocation.lat, userLocation.lng, p.coords.lat, p.coords.lng);
+    return { puja: p, straightKm };
+  });
+
+  candidatesWithStraightDist.sort((a, b) => a.straightKm - b.straightKm);
+  const topCandidates = candidatesWithStraightDist.slice(0, 5);
+
+  let bestPandal = topCandidates[0].puja;
+  let minRoadDistanceKm = topCandidates[0].straightKm * 1.3;
+  let bestRouteRes = null;
+
+  for (const item of topCandidates) {
+    const routeRes = await fetchRealOSRMRoute(userLocation, item.puja.coords, mode);
+    const roadKm = routeRes ? routeRes.distanceKm : item.straightKm * 1.3;
+    if (roadKm < minRoadDistanceKm) {
+      minRoadDistanceKm = roadKm;
+      bestPandal = item.puja;
+      bestRouteRes = routeRes;
+    }
+  }
+
+  return {
+    pandal: bestPandal,
+    roadDistanceKm: Math.round(minRoadDistanceKm * 10) / 10,
+    routeInfo: bestRouteRes
+  };
+}
