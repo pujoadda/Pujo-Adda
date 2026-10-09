@@ -110,7 +110,7 @@ export default function PandalPujaModal({ onClose }) {
   const allPandalsForPuja = React.useMemo(() => {
     if (!selectedPuja) return [];
     if (selectedPuja.id === 'durga-puja') {
-      return [...PUJAS_DATA.map(p => ({ ...p, pujaType: 'durga-puja', district: 'Kolkata', place: p.address.split(',')[1]?.trim() || 'Kolkata' })), ...SAMPLE_NON_KOLKATA_PUJAS.filter(p => p.pujaType === 'durga-puja')];
+      return [...PUJAS_DATA.map(p => ({ ...p, pujaType: 'durga-puja', district: 'Kolkata', place: p.address?.split(',')[1]?.trim() || 'Kolkata' })), ...SAMPLE_NON_KOLKATA_PUJAS.filter(p => p.pujaType === 'durga-puja')];
     }
     return SAMPLE_NON_KOLKATA_PUJAS.filter(p => p.pujaType === selectedPuja.id);
   }, [selectedPuja]);

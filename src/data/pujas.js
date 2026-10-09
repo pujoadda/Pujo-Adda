@@ -1,8 +1,8 @@
 export const PUJA_ZONES = [
-  { id: 'all', name: 'All Greater Kolkata & Suburbs', count: 85, color: '#f59e0b' },
-  { id: 'north', name: 'North Kolkata & Suburbs (Baranagar to Barrackpore)', count: 35, color: '#fbbf24' },
-  { id: 'south', name: 'South Kolkata & Suburbs (Kalighat to Kavi Subhash & Behala)', count: 32, color: '#38bdf8' },
-  { id: 'middle', name: 'Middle / Central Kolkata & Salt Lake / New Town', count: 18, color: '#f43f5e' },
+  { id: 'all', name: 'All Greater Kolkata & Suburbs', count: 149, color: '#f59e0b' },
+  { id: 'north', name: 'North Kolkata & Suburbs (Baranagar to Barrackpore)', count: 61, color: '#fbbf24' },
+  { id: 'south', name: 'South Kolkata & Suburbs (Kalighat to Kavi Subhash & Behala)', count: 56, color: '#38bdf8' },
+  { id: 'middle', name: 'Middle / Central Kolkata & Salt Lake / New Town', count: 32, color: '#f43f5e' },
 ];
 
 export const PUJAS_DATA = [
@@ -1391,7 +1391,7 @@ export const PUJAS_DATA = [
     theme: 'Bengal Craft Heritage & Eco-Friendly Installations',
     description: 'Premier Baranagar landmark puja near Baranagar Metro station. Features rich handicraft installations and community cultural celebrations.',
     highlights: ['Baranagar Metro Proximity', 'Eco-friendly Handicraft Art', 'Community Cultural Fest'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/baranagar-netaji-park-sarbojanin.jpg',
     bestTimeToVisit: 'Evening (6:00 PM - 9:00 PM)'
   },
   {
@@ -1410,7 +1410,7 @@ export const PUJAS_DATA = [
     theme: 'Traditional Sabeki Idol & Community Pavilion',
     description: 'Historic Baranagar sports & cultural club known for timeless traditional idol sculpture and lively neighborhood fair.',
     highlights: ['GLT Road Location', 'Traditional Sabeki Pratima', 'Family Friendly Atmosphere'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/baranagar-friends-union-club.jpg',
     bestTimeToVisit: 'Afternoon (3:00 PM - 6:00 PM)'
   },
   {
@@ -1429,7 +1429,7 @@ export const PUJAS_DATA = [
     theme: 'Riverfront Heritage & Hooghly Ghat Ambiance',
     description: 'Scenic riverbank puja near historic Kuthir Ghat along the Ganges. Known for peaceful evening breeze and traditional rituals.',
     highlights: ['Hooghly Riverfront Scenic View', 'Ghat Side Arati', 'Traditional Idol Art'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/kuthir-ghat-sarbojanin-durgotsav.jpg',
     bestTimeToVisit: 'Sunset Arati (5:30 PM - 7:30 PM)'
   },
   {
@@ -1448,7 +1448,7 @@ export const PUJAS_DATA = [
     theme: 'BT Road Gateway Illumination & Modern Theme',
     description: 'Major Sinthee More attraction along BT Road. Known for grand illumination gateways across BT Road and creative theme installations.',
     highlights: ['Sinthee More Gateway', 'BT Road Light Canopies', 'Award-Winning Illumination'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/sinthee-sarbojanin.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 11:30 PM)'
   },
   {
@@ -1467,7 +1467,7 @@ export const PUJAS_DATA = [
     theme: 'Monumental Replica & Maritime Spectacle',
     description: 'Famous for creating grand thematic vessel and ship structures (including Titanic replicas) that draw huge crowds across North 24 Parganas.',
     highlights: ['Titanic & Ship Theme Legacy', 'Grand Ground Capacity', 'Massive Lighting Displays'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/baranagar-netaji-colony-lowland.jpg',
     bestTimeToVisit: 'Late Evening (7:00 PM - 10:30 PM)'
   },
   {
@@ -1486,7 +1486,7 @@ export const PUJAS_DATA = [
     theme: 'Community Cultural Hub & Clay Artistry',
     description: 'Located right next to Noapara Metro terminal. Features vibrant local clay art, traditional idol work, and warm neighborhood hospitality.',
     highlights: ['Noapara Metro Junction', 'Clay Idol Sculpture', 'Lively Local Fair'],
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/noapara-dada-bhai-sangho.jpg',
     bestTimeToVisit: 'Evening (6:00 PM - 9:00 PM)'
   },
   {
@@ -1543,7 +1543,7 @@ export const PUJAS_DATA = [
     theme: 'Heritage Community Park Tradition',
     description: 'Historic North Kolkata barowari puja set amidst the green expanses of Tala Park. Combines traditional idol sculpting with vibrant fairground rides.',
     highlights: ['Century-Old Barowari', 'Green Park Setting', 'Belgachia Metro Proximity'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/tala-barowari.jpg',
     bestTimeToVisit: 'Afternoon / Evening (4:00 PM - 7:30 PM)'
   },
   {
@@ -1600,7 +1600,7 @@ export const PUJAS_DATA = [
     theme: 'Eco-Artisan Installations & Traditional Pratima',
     description: 'A major North Kolkata crowd puller known for artistic eco-friendly installations crafted from clay, jute, and bamboo.',
     highlights: ['Hatibagan Circuit Stop', 'Eco-Artisan Themes', 'Vibrant Local Atmosphere'],
-    image: '/images/pujas/hatibagan-nabin-pally.jpg',
+    image: '/images/pujas/nabinpally.jpg',
     bestTimeToVisit: 'Late Evening (8:30 PM - 12:00 AM)'
   },
   {
@@ -1638,7 +1638,7 @@ export const PUJAS_DATA = [
     theme: 'Traditional Sholapith & Metallic Filigree Art',
     description: 'Renowned for exquisite Sholapith (Indian cork) craftsmanship and majestic traditional Durga idols in North Kolkata.',
     highlights: ['Sholapith Craftsmanship', 'Shobhabazar Circuit', 'Heritage Lane Illumination'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/beniatola-sarbojanin.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 12:30 AM)'
   },
   {
@@ -1657,7 +1657,7 @@ export const PUJAS_DATA = [
     theme: 'Aristocratic Neighborhood Art & Brass Craft',
     description: 'Situated in the historic aristocratic quarter of Pathuriaghata. Features brass metal work, antique lamps, and traditional sabeki idol styling.',
     highlights: ['Pathuriaghata Heritage Mansion District', 'Brass Craftwork', 'Peaceful Queue'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/pathuriaghata-pancher-pally.jpg',
     bestTimeToVisit: 'Afternoon / Evening (3:30 PM - 7:00 PM)'
   },
   {
@@ -1676,7 +1676,7 @@ export const PUJAS_DATA = [
     theme: 'Innovative Concept Sculpture & Environmental Art',
     description: 'Award-winning Maniktala puja known for conceptual sculptures created with eco-conscious materials and haunting musical scores.',
     highlights: ['Multiple Sharad Samman Awards', 'Eco-Conscious Materials', 'Immersive Soundscapes'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/gouriberia-sarbojanin.jpg',
     bestTimeToVisit: 'Late Night (11:00 PM - 2:00 AM)'
   },
   {
@@ -1695,7 +1695,7 @@ export const PUJAS_DATA = [
     theme: 'Botanical & Live Plant Eco Installation',
     description: 'Famous for creating astonishing eco-pandals made entirely out of thousands of living plants, saplings, and organic terrariums.',
     highlights: ['Living Plant Pandal Installation', 'Eco-Green Philosophy', 'Award Winning Concept'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/lalabagan-nabankur.jpg',
     bestTimeToVisit: 'Morning / Afternoon (8:00 AM - 12:00 PM)'
   },
   {
@@ -1714,7 +1714,7 @@ export const PUJAS_DATA = [
     theme: 'Kumbh Mela & Monumental Temple Replicas',
     description: 'Famous across North 24 Parganas for recreating monumental Kumbh Mela ghats, Kedarnath temples, and grand illuminations.',
     highlights: ['Kumbh Mela Replicas', 'Massive Ground Capacity', 'Sodepur-Agarpara Circuit Star'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/agarpara-tarapukur-milan-sangha.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 12:00 AM)'
   },
   {
@@ -1733,7 +1733,7 @@ export const PUJAS_DATA = [
     theme: 'Colossal Record-Breaking Statues & Illumination',
     description: 'Renowned throughout Bengal for building record-breaking 107-ft tall idol installations and colossal lighting gateways.',
     highlights: ['Colossal Statue Heights', 'Sodepur Main Attraction', 'Massive Illumination Gates'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/sodepur-sahid-colony.jpg',
     bestTimeToVisit: 'Late Evening (7:30 PM - 11:30 PM)'
   },
   {
@@ -1752,7 +1752,7 @@ export const PUJAS_DATA = [
     theme: 'Theme Craft & Contemporary Lighting',
     description: 'Premier residential sector puja in Sodepur known for artistic themes, fine illumination, and food carnivals.',
     highlights: ['HB Town Circuit', 'Food Fairground', 'Contemporary Artistry'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/sodepur-hb-town.jpg',
     bestTimeToVisit: 'Night (8:30 PM - 11:30 PM)'
   },
   {
@@ -1771,7 +1771,7 @@ export const PUJAS_DATA = [
     theme: 'Royal Palace Architecture & Chandannagar Lights',
     description: 'The crowning jewel of Barrackpore! Recreates breathtaking royal palace architecture with Chandannagar overhead light displays.',
     highlights: ['Barrackpore Flagship Puja', 'Palace Architecture Replica', 'Chandannagar Light Canopies'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/barrackpore-anandapuri-sarbojanin.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 1:00 AM)'
   },
   {
@@ -1790,7 +1790,7 @@ export const PUJAS_DATA = [
     theme: 'Historic Armed Forces Heritage & Grand Grounds',
     description: 'Set within the vast parade grounds of Barrackpore Police Reserve. Known for disciplined crowd management and magnificent pandals.',
     highlights: ['Vast Parade Ground Setting', 'Disciplined Queueing', 'Historic Military Heritage'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/barrackpore-latabaggan-police-line.jpg',
     bestTimeToVisit: 'Afternoon / Evening (4:00 PM - 8:00 PM)'
   },
   {
@@ -1809,7 +1809,7 @@ export const PUJAS_DATA = [
     theme: 'World Monument Replicas & Twin Towers Spectacle',
     description: 'Nadia district\'s mega thematic sensation! Draws millions of visitors for constructing towering 150-ft replicas of Twin Towers, Grand Mosques, and Palaces.',
     highlights: ['150-ft Towering Replicas', 'Nadia District Flagship Attraction', 'Massive Ground Capacity'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/kalyani-iti-more-durga-puja-ground.jpg',
     bestTimeToVisit: 'All Night (10:00 PM - 4:00 AM)'
   },
   {
@@ -1828,7 +1828,7 @@ export const PUJAS_DATA = [
     theme: 'Eco-Artisan Temples & Lighting Wonders',
     description: 'Located in Kalyani B Block. Celebrated for intricate wooden carvings, eco-bamboo art, and mesmerizing lighting displays.',
     highlights: ['Kalyani B-Block Landmark', 'Wooden Carvings', 'Serene Sector Ambiance'],
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/kalyani-b-14-durga-puja.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 11:30 PM)'
   },
 
@@ -1908,7 +1908,7 @@ export const PUJAS_DATA = [
     theme: 'Rail Heritage & Eco-Friendly Village Life',
     description: 'Conveniently located right outside Sealdah Station. Features rich themes showcasing Indian Railway heritage, rural crafts, and grand illuminating lighting.',
     highlights: ['Next to Sealdah Station', 'Rail Heritage Theme', 'Easy Transit Access', 'Lively Carnival Food Market'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/sealdah-athletic-club.jpg',
     bestTimeToVisit: 'Evening (5:00 PM - 8:00 PM)'
   },
   {
@@ -1927,7 +1927,7 @@ export const PUJAS_DATA = [
     theme: 'Jewelry Heritage & Classic Gold Filigree Craft',
     description: 'Situated in the heart of Kolkata\'s historic gold merchant district of Bowbazar. Features intricate golden filigree designs and classic idol craftsmanship.',
     highlights: ['Golden Filigree Art', 'Historic Bowbazar District', 'Central Metro Access', 'Century-old Tradition'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/bowbazar-sarbojanin.jpg',
     bestTimeToVisit: 'Afternoon (2:00 PM - 5:00 PM)'
   },
   {
@@ -1946,7 +1946,7 @@ export const PUJAS_DATA = [
     theme: 'Rani Rashmoni Legacy & Historic Central Heritage',
     description: 'Associated with the legendary Rani Rashmoni family history near Esplanade. Deep cultural heritage, royal idol craftsmanship, and central city buzz.',
     highlights: ['Rani Rashmoni Family History', 'Esplanade Hub', 'Traditional Pratima', 'Shopping Quarter Central'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/janbazar-durga-puja.jpg',
     bestTimeToVisit: 'Evening (6:00 PM - 9:00 PM)'
   },
   {
@@ -1965,7 +1965,7 @@ export const PUJAS_DATA = [
     theme: 'Community Harmony & Traditional Craftsmanship',
     description: 'A vibrant Middle Kolkata puja known for promoting inter-community harmony, traditional dhak performances, and artistic pandals.',
     highlights: ['Inter-community Harmony', 'CIT Road Illumination', 'Vibrant Local Food Fair', 'Traditional Dhak Competitions'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/entally-sarbojanin.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 11:00 PM)'
   },
   {
@@ -1984,7 +1984,7 @@ export const PUJAS_DATA = [
     theme: 'Centenary Freedom Movement Heritage & Traditional Sabeki',
     description: 'Founded by Swami Vivekananda\'s brother Bhupendranath Dutta and Indian freedom fighters. Features iconic traditional Ekchala idols and physical culture heritage.',
     highlights: ['Centenary Freedom Struggle History', 'Pure Sabeki Pratima', 'Girish Park Metro Proximity'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/simla-byam-samity.jpg',
     bestTimeToVisit: 'Evening (5:30 PM - 9:00 PM)'
   },
   {
@@ -2003,7 +2003,7 @@ export const PUJAS_DATA = [
     theme: 'Terracotta Handiwork & Indian Mythological Art',
     description: 'Known across Central Kolkata for intricate clay terracotta wall reliefs, classic idol styling, and cozy heritage lane atmosphere.',
     highlights: ['Terracotta Handiwork', 'Girish Park Metro Step-Away', 'Historic Muktaram Babu Street'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/chorbagan-sarbojanin.jpg',
     bestTimeToVisit: 'Night (8:30 PM - 11:30 PM)'
   },
   {
@@ -2022,7 +2022,7 @@ export const PUJAS_DATA = [
     theme: 'Tantric Heritage & Historic Kali Temple Tradition',
     description: 'Celebrated at the 200+ year old Thanthania Siddheshwari Kalibari temple. Witness ancient Vedic rituals, clay lamps, and serene spiritual arati.',
     highlights: ['200+ Year Historic Temple', 'Pure Vedic Rituals', 'Spiritual Atmosphere'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/thanthania-kalibari.jpg',
     bestTimeToVisit: 'Morning / Evening Arati (7:00 AM / 7:00 PM)'
   },
   {
@@ -2041,7 +2041,7 @@ export const PUJAS_DATA = [
     theme: 'Colossal Theme Castles & Sci-Fi Installations',
     description: 'Salt Lake\'s premier thematic blockbuster! Famous for building massive fantasy castles, dinosaur parks, and alien worlds with sprawling open ground space.',
     highlights: ['Salt Lake Flagship Puja', 'Colossal Ground Park Setting', 'Sprawling Fairground & Food Stalls'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/salt-lake-fd-block-durga-puja.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 12:30 AM)'
   },
   {
@@ -2060,7 +2060,7 @@ export const PUJAS_DATA = [
     theme: 'Temple Replicas & Artisan Wood Carvings',
     description: 'Located near City Centre Mall in Salt Lake. Renowned for detailed temple replicas, wooden carvings, and elegant park illumination.',
     highlights: ['City Centre Metro Access', 'Wood Carving Pandal', 'Family Friendly Layout'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/salt-lake-ak-block-durga-puja.jpg',
     bestTimeToVisit: 'Late Evening (7:00 PM - 11:00 PM)'
   },
   {
@@ -2079,7 +2079,7 @@ export const PUJAS_DATA = [
     theme: 'Folk Art & Rural Bengal Craftsmanship',
     description: 'Consistently wins awards in Bidhannagar for portraying rural Bengal village crafts, jute weaving, and clay sculptures.',
     highlights: ['Rural Bengal Craftsmanship', 'Bidhannagar Circuit', 'Peaceful Park Queue'],
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/bj-block.jpg',
     bestTimeToVisit: 'Evening (6:00 PM - 9:30 PM)'
   },
   {
@@ -2117,7 +2117,7 @@ export const PUJAS_DATA = [
     theme: 'Thought-Provoking Social Art & Clay Terracotta',
     description: 'Pioneer theme puja in Ultadanga! Famous for conceptual art installations focusing on social messages, ancient Indian sculpture, and clay craftsmanship.',
     highlights: ['Ultadanga Theme Pioneer', 'Top Sharad Samman Winner', 'Terracotta Sculptures'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/telengabagan-sarbojanin.jpg',
     bestTimeToVisit: 'Late Night (11:00 PM - 2:00 AM)'
   },
   {
@@ -2136,7 +2136,7 @@ export const PUJAS_DATA = [
     theme: 'Folk Heritage & Intricate Metal Work',
     description: 'Major Kankurgachi attraction known for fusing Indian folk art traditions with gleaming bell-metal and copper embellishments.',
     highlights: ['Phoolbagan Metro Proximity', 'Bell Metal Craftsmanship', 'Vibrant Local Atmosphere'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/kankurgachi-mitali-sangha.jpg',
     bestTimeToVisit: 'Late Evening (8:00 PM - 11:30 PM)'
   },
   {
@@ -2155,7 +2155,7 @@ export const PUJAS_DATA = [
     theme: 'Nostalgic Vintage Transport & Heritage Installation',
     description: 'Renowned across Kolkata for creative nostalgic installations (like creating full-sized vintage yellow taxis, tramcars, and old Kolkata streetscapes).',
     highlights: ['Nostalgic Yellow Taxi & Tram Themes', 'CIT Road Illumination', 'Award-Winning Visual Art'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/beleghata-33-pally.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 12:00 AM)'
   },
 
@@ -2273,7 +2273,7 @@ export const PUJAS_DATA = [
     theme: 'Experiential Conceptual Architecture',
     description: 'Located right next to Mudiali Club along Lake Temple Road. Renowned for turning narrow South Kolkata avenues into surreal artistic tunnels.',
     highlights: ['Artistic Spatial Transformations', 'Lake Temple Ambiance', 'Mudiali & Shib Mandir Twin Visit', 'Innovative Light Effects'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/shib-mandir.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 12:30 AM)'
   },
   {
@@ -2292,7 +2292,7 @@ export const PUJAS_DATA = [
     theme: 'Tribal Folk Heritage & Fusion Sculptures',
     description: 'Blends ancient Indian tribal heritage with high-tech contemporary architectural execution. Features live folk musicians and mesmerizing idol design.',
     highlights: ['Tribal Art Installations', 'Live Folk Performances', 'Rashbehari Triangle Hub', 'Award Winning Sculptures'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/tridhara-sammilani.jpg',
     bestTimeToVisit: 'Early Morning (6:30 AM - 9:30 AM)'
   },
   {
@@ -2330,7 +2330,7 @@ export const PUJAS_DATA = [
     theme: 'Subtle Artistic Sophistication & Organic Materials',
     description: 'Known for understated elegance, organic materials (bamboo, jute, clay, terracotta), and soulful traditional idol artistry in Ballygunge.',
     highlights: ['Organic Eco-Art', 'Ballygunge Heritage Food Circuit', 'Classic Idol Aesthetics', 'Peaceful Queue Management'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/ballygunge-cultural-association.jpg',
     bestTimeToVisit: 'Afternoon (1:00 PM - 4:00 PM)'
   },
   {
@@ -2368,7 +2368,7 @@ export const PUJAS_DATA = [
     theme: 'Surrealist Modern Art & Moving Sculptures',
     description: 'Deep South Kolkata masterpiece! Renowned for groundbreaking surrealist installations, kinetic moving sculptures, and breathtaking lighting design.',
     highlights: ['Kinetic Moving Sculptures', 'Surrealist Art Philosophy', 'Gitanjali Metro Proximity', 'Multiple Sharad Samman Winner'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/naktala-udayan-sangha.jpg',
     bestTimeToVisit: 'Early Morning (6:00 AM - 9:00 AM)'
   },
   {
@@ -2406,7 +2406,7 @@ export const PUJAS_DATA = [
     theme: 'Chhau Dance & Rural Bengal Folk Craft',
     description: 'Renowned Bhowanipore theme puja near Netaji Bhavan. Known for introducing authentic Purulia Chhau masks, patachitra scroll art, and rural heritage themes.',
     highlights: ['Chhau Mask & Patachitra Art', 'Netaji Bhavan Metro Access', 'Bhowanipore Circuit Star'],
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/bhowanipore-75-pally.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 11:30 PM)'
   },
   {
@@ -2425,7 +2425,7 @@ export const PUJAS_DATA = [
     theme: 'Social Awareness & Environmental Installation',
     description: 'Situated right outside Jatin Das Park Metro exit. Celebrated for thought-provoking installations on environmental protection, mental health, and Indian craft.',
     highlights: ['Jatin Das Park Metro Step-Away', 'Environmental Installations', 'Historic Hazra Intersection'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/hazra-park-durgotsab.jpg',
     bestTimeToVisit: 'Late Evening (7:30 PM - 11:00 PM)'
   },
   {
@@ -2444,7 +2444,7 @@ export const PUJAS_DATA = [
     theme: 'Bespoke Ceramic & Clay Handiwork',
     description: 'Cozy South Kolkata neighborhood theme puja famous for intricate pottery, ceramic murals, and graceful traditional idol aesthetics.',
     highlights: ['Ceramic & Clay Mural Work', 'Gariahat Heritage Circuit', 'Warm Community Ambiance'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/hindusthan-park-sarbojanin.jpg',
     bestTimeToVisit: 'Night (8:30 PM - 12:00 AM)'
   },
   {
@@ -2463,7 +2463,7 @@ export const PUJAS_DATA = [
     theme: 'Tactile Braille & Social Inclusion Architecture',
     description: 'Pioneer of socially inclusive installations (like creating full Braille pandals for visually impaired visitors). Deep human philosophy and award-winning design.',
     highlights: ['Braille & Inclusive Pandal Pioneer', 'Southern Avenue Proximity', 'Multiple Sharad Samman Winner'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/samaj-sebi-sangha.jpg',
     bestTimeToVisit: 'Early Morning / Late Night (7:00 AM / 11:30 PM)'
   },
   {
@@ -2501,7 +2501,7 @@ export const PUJAS_DATA = [
     theme: 'Women Priest Ritual Empowerment & Concept Craft',
     description: 'Pioneered history by appointing female priests (Purohits) for pure Vedic rituals! Features intimate neighborhood theme craft steps from Kalighat Metro.',
     highlights: ['Female Priest Ritual Pioneer', 'Kalighat Metro Step-Away', 'Badamtala Neighbor Twin Visit'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/66-pally.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 12:30 AM)'
   },
   {
@@ -2520,7 +2520,7 @@ export const PUJAS_DATA = [
     theme: 'Traditional Bonedi Ambiance & Modern Lighting',
     description: 'Classic Bhowanipore community puja known for pure traditional sabeki idols, glowing illumination arches, and active cultural programs.',
     highlights: ['Bhowanipore Circuit', 'Traditional Sabeki Pratima', 'Family Friendly Atmosphere'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/chakraberia-sarbojanin.jpg',
     bestTimeToVisit: 'Evening (6:30 PM - 10:00 PM)'
   },
   {
@@ -2539,7 +2539,7 @@ export const PUJAS_DATA = [
     theme: 'Folk Artistry & Modern Lighting Towers',
     description: 'Major attraction near Netaji Kudghat Metro station. Features eco-bamboo structures, bright illumination towers, and traditional clay idols.',
     highlights: ['Netaji Kudghat Metro Access', 'Eco-Bamboo Structures', 'Lively Neighborhood Fair'],
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/kudghat-pragati-sangha.jpg',
     bestTimeToVisit: 'Late Evening (7:30 PM - 11:00 PM)'
   },
   {
@@ -2558,7 +2558,7 @@ export const PUJAS_DATA = [
     theme: 'Contemporary Sculpture & Community Spirit',
     description: 'Situated right outside Masterda Surya Sen Metro exit in Bansdroni. Celebrated for creative contemporary sculptures and lively food stalls.',
     highlights: ['Bansdroni Metro Step-Away', 'NSC Bose Road Illumination', 'Vibrant Local Atmosphere'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/bansdroni-super-star-club.jpg',
     bestTimeToVisit: 'Night (8:00 PM - 11:30 PM)'
   },
   {
@@ -2577,7 +2577,7 @@ export const PUJAS_DATA = [
     theme: '9 Manifestations of Goddess Durga Concept',
     description: 'Famous Garia landmark depicting the Navadurga (9 sacred divine manifestations of Goddess Durga) through detailed clay sculptures.',
     highlights: ['Kavi Nazrul Metro Proximity', 'Navadurga 9 Form Sculpture', 'Garia Shopping Junction'],
-    image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/garia-nabadurga.jpg',
     bestTimeToVisit: 'Evening (6:00 PM - 10:00 PM)'
   },
   {
@@ -2596,7 +2596,7 @@ export const PUJAS_DATA = [
     theme: 'Traditional Village Mandap & Folk Lighting',
     description: 'Sprawling community ground puja near Shahid Khudiram Metro. Known for traditional village mandap designs and peaceful family queueing.',
     highlights: ['Shahid Khudiram Metro Access', 'Sprawling Ground Space', 'Traditional Village Ambiance'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/brahmapur-sarbojanin-durga-puja.jpg',
     bestTimeToVisit: 'Afternoon / Evening (4:00 PM - 8:00 PM)'
   },
   {
@@ -2615,7 +2615,7 @@ export const PUJAS_DATA = [
     theme: 'Lakeside Floating Market & Illumination Canopy',
     description: 'Situated next to Kolkata\'s famous Patuli Floating Market along EM Bypass. Features lake-surface LED illumination and floating flower displays.',
     highlights: ['Patuli Floating Market Setting', 'EM Bypass Location', 'Lakeside Illumination Canopies'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/baishnabghata-patuli-upanagari.jpg',
     bestTimeToVisit: 'Night (7:30 PM - 11:30 PM)'
   },
   {
@@ -2634,7 +2634,7 @@ export const PUJAS_DATA = [
     theme: 'Master Concept Sculpture & Asian Paints Awardee',
     description: 'Behala\'s premier award-winning theme puja! Consistently crafts museum-grade conceptual art and intricate installations along DH Road.',
     highlights: ['Behala Flagship Theme Puja', 'Multiple Asian Paints Winner', 'DH Road Illumination'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/behala-sree-sangha.jpg',
     bestTimeToVisit: 'Late Night (10:30 PM - 2:00 AM)'
   },
   {
@@ -2653,7 +2653,7 @@ export const PUJAS_DATA = [
     theme: 'Surreal Architectural Installations & Acoustic Art',
     description: 'A giant in the Haridevpur theme circuit! Famous for creating surreal architectural labyrinths, metallic sculptures, and custom musical soundscapes.',
     highlights: ['Haridevpur Circuit Pioneer', 'Surreal Labyrinth Pandal', 'Top Award Winning Concept'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/41-pally-club-haridevpur.jpg',
     bestTimeToVisit: 'Late Night (11:00 PM - 2:30 AM)'
   },
   {
@@ -2672,7 +2672,7 @@ export const PUJAS_DATA = [
     theme: 'Environmental Eco-Art & Terracotta Murals',
     description: 'Located next to 41 Pally in Haridevpur. Celebrated for eco-conscious bamboo themes, intricate terracotta murals, and breathtaking night lighting.',
     highlights: ['Haridevpur Double-Feature', 'Terracotta Mural Installations', 'Eco-Bamboo Craftsmanship'],
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/ajeya-sanghati-haridevpur.jpg',
     bestTimeToVisit: 'Night (9:00 PM - 1:00 AM)'
   },
   {
@@ -2710,7 +2710,7 @@ export const PUJAS_DATA = [
     theme: 'Abstract Fiber Glass Art & Modern Illumination',
     description: 'Kasba landmark near Acropolis Mall. Celebrated for abstract fiberglass sculptures, vibrant color play, and broad boulevard access.',
     highlights: ['Acropolis Mall / Ruby Proximity', 'Fiberglass Abstract Art', 'Wide Boulevard Queue'],
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/rajdanga-naba-uday-sangha.jpg',
     bestTimeToVisit: 'Night (8:30 PM - 12:00 AM)'
   },
   {
@@ -2729,7 +2729,7 @@ export const PUJAS_DATA = [
     theme: 'Intricate Wood Carvings & Serene Lakeside Setting',
     description: 'Renowned Santoshpur puja known for detailed woodwork, terracotta reliefs, and lakeside fairground atmosphere.',
     highlights: ['Santoshpur Lake Setting', 'Intricate Woodwork', 'Jadavpur University Area Circuit'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/santoshpur-lake-pally.jpg',
     bestTimeToVisit: 'Late Evening (7:30 PM - 11:00 PM)'
   },
   {
@@ -2748,7 +2748,7 @@ export const PUJAS_DATA = [
     theme: 'Expansive Ground Illumination & Fusion Pratima',
     description: 'Sprawling Jodhpur Park ground puja famous for modern architectural fusion idols, wide food fairgrounds, and celebrity cultural events.',
     highlights: ['Jodhpur Park Ground Setting', 'Food & Cultural Fair', 'Broad Avenue Queue'],
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/jodhpur-park-sarbojanin.jpg',
     bestTimeToVisit: 'Evening (6:30 PM - 10:30 PM)'
   },
   {
@@ -2767,8 +2767,142 @@ export const PUJAS_DATA = [
     theme: 'Coin & Postage Stamp Replicas Artistry',
     description: 'Famous for creating astonishing thematic pandals using thousands of authentic commemorative Indian coins, postage stamps, and metallic seals.',
     highlights: ['Coin & Stamp Pandal Art', 'Multiple Sharad Samman Winner', 'Dhakuria Circuit Star'],
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: '/images/pujas/babubagan-sarbojanin.jpg',
     bestTimeToVisit: 'Late Night (11:00 PM - 2:00 AM)'
+  }
+,
+{
+    id: 'arjunpur-amra-sobai',
+    name: 'Arjunpur Amra Sobai Club',
+    bengaliName: 'অর্জুনপুর আমরা সবাই ক্লাব',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.6288, lng: 88.4285 },
+    address: 'NC-15, Arjunpur Road, Taltala, VIP Road, Kolkata - 700059',
+    nearestMetro: 'Dum Dum Metro Station',
+    crowdLevel: 'High',
+    crowdStatus: 'Moderate Queue (~25 mins)',
+    rating: 4.88,
+    estYear: 1973,
+    theme: 'Cosmic Wonder & Thought-Provoking Artistic Installations',
+    description: 'Celebrated North Kolkata puja famous for captivating conceptual artistry, thought-provoking contemporary themes, and stunning illuminated backdrops.',
+    highlights: ['Stunning Artistic Theme', 'Asian Paints Sharod Samman Winner', 'Vibrant Illumination', 'Famous Concept Art'],
+    image: '/images/pujas/amra-sobai-sarbojanin.jpg',
+    bestTimeToVisit: 'Late Night (11:00 PM - 2:00 AM)'
+  },
+  {
+    id: 'darjipara-sarbojanin',
+    name: 'Darjipara Sarbojanin Durgotsav',
+    bengaliName: 'দর্জিপাড়া সর্বজনীন দুর্গোৎসব',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.5898, lng: 88.3688 },
+    address: 'Darjipara, Beadon Street, Central Avenue, Kolkata - 700006',
+    nearestMetro: 'Girish Park Metro Station',
+    crowdLevel: 'High',
+    crowdStatus: 'Moderate Queue (~20 mins)',
+    rating: 4.85,
+    estYear: 1932,
+    theme: 'Black Basalt Stone Sculpture Heritage & Traditional Artistry',
+    description: 'Historic North Kolkata heritage puja celebrating with magnificent stone-carved aesthetic deities, deep-rooted cultural fervor, and classic aristocratic traditions.',
+    highlights: ['Heritage Aristocratic Tradition', 'Intricate Stone Carved Idol Style', 'Near Girish Park', 'Serum Sharad Baran Samman'],
+    image: '/images/pujas/darji-para.jpg',
+    bestTimeToVisit: 'Evening (5:00 PM - 9:00 PM)'
+  },
+  {
+    id: 'harisabha-sarbojanin',
+    name: 'Harisabha Sarbojanin Durgotsav',
+    bengaliName: 'হরিসভা সর্বজনীন দুর্গোৎসব',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.5975, lng: 88.3712 },
+    address: 'Harisabha Ground, North Kolkata, Kolkata - 700006',
+    nearestMetro: 'Shyambazar Metro Station',
+    crowdLevel: 'Moderate',
+    crowdStatus: 'Smooth Moving Queue (~15 mins)',
+    rating: 4.79,
+    estYear: 1954,
+    theme: 'Folk Terracotta Elegance & Expressive Devotional Art',
+    description: 'Traditional community puja renowned for its expressive earthen artwork, soulful idol craftsmanship, and authentic neighborhood festive spirit.',
+    highlights: ['Expressive Idol Art', 'Warm Neighborhood Atmosphere', 'Traditional Dhak & Aarti', 'Folk Art Décor'],
+    image: '/images/pujas/horisova-sarbojonin.jpg',
+    bestTimeToVisit: 'Morning Puja & Pushpanjali (8:00 AM - 11:30 AM)'
+  },
+  {
+    id: 'moholla-sarbojonin',
+    name: 'Moholla Sarbojanin Durgotsav',
+    bengaliName: 'মহল্লা সর্বজনীন দুর্গোৎসব',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.5935, lng: 88.3615 },
+    address: 'Moholla Lane, Near Ahiritola & Sovabazar, Kolkata - 700005',
+    nearestMetro: 'Sovabazar Sutanuti Metro Station',
+    crowdLevel: 'High',
+    crowdStatus: 'Moderate Queue (~20 mins)',
+    rating: 4.81,
+    estYear: 1962,
+    theme: 'Classic Ekchala Daaker Saaj & Golden Heritage',
+    description: 'Beloved community puja situated in the cultural heart of North Kolkata showcasing classic Daaker Saaj ornamentation, traditional rituals, and warm local warmth.',
+    highlights: ['Classic Daaker Saaj', 'North Kolkata Cultural Route', 'Authentic Bhog Distribution', 'Traditional Pratima'],
+    image: '/images/pujas/moholla-sarbojonin.jpg',
+    bestTimeToVisit: 'Evening (6:30 PM - 10:30 PM)'
+  },
+  {
+    id: 'bagbazar-tal-betal',
+    name: 'North Talbetal (Tal Betal Durga Puja)',
+    bengaliName: 'তাল বেতাল সর্বজনীন দুর্গাপূজা',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.6022, lng: 88.3695 },
+    address: 'Pasupati Bose Lane, Baghbazar, Kolkata - 700003',
+    nearestMetro: 'Shyambazar Metro Station',
+    crowdLevel: 'High',
+    crowdStatus: 'Brisk Moving Queue (~15 mins)',
+    rating: 4.84,
+    estYear: 1948,
+    theme: 'Royal Golden Chalchitra & Sholar Saaj Splendor',
+    description: 'One of Baghbazar’s iconic community pujas, cherished for radiant golden backdrop chalchitra, exquisite traditional idol styling, and iconic North Kolkata pandal hopping atmosphere.',
+    highlights: ['Radiant Sholar Saaj', 'Intricate Chalchitra', 'Baghbazar Heritage Route', 'Night Illumination'],
+    image: '/images/pujas/north-talbetal.jpg',
+    bestTimeToVisit: 'Evening to Midnight (7:00 PM - 12:00 AM)'
+  },
+  {
+    id: 'raja-ballav-para',
+    name: 'Raja Ballav Para Sarbojanin',
+    bengaliName: 'রাজা বল্লভ পাড়া সর্বজনীন',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.6035, lng: 88.3662 },
+    address: 'Raja Rajballav Street, Baghbazar, Kolkata - 700003',
+    nearestMetro: 'Shyambazar Metro Station',
+    crowdLevel: 'Very High',
+    crowdStatus: 'Heavy Queue (~35 mins)',
+    rating: 4.90,
+    estYear: 1938,
+    theme: 'Social Consciousness & Artistic Tribute to Awakening',
+    description: 'Historic Baghbazar committee known for bold, moving themes addressing social justice, humanity, and artistic resilience with deeply thought-provoking installations.',
+    highlights: ['Thought-Provoking Theme', 'Raja Rajballav Street Heart', 'Artistic Awakening', 'Near Baghbazar Ghat'],
+    image: '/images/pujas/raja-ballav-para.jpg',
+    bestTimeToVisit: 'Late Night (10:00 PM - 2:00 AM)'
+  },
+  {
+    id: 'sadanga-durgotsav-samity',
+    name: 'Sadanga Durgotsav Samity',
+    bengaliName: 'ষাডাঙ দুর্গোৎসব সমিতি',
+    zone: 'north',
+    zoneName: 'North Kolkata',
+    coords: { lat: 22.6041, lng: 88.3670 },
+    address: 'Raja Rajballav Street, Baghbazar, Kolkata - 700003',
+    nearestMetro: 'Shyambazar Metro Station',
+    crowdLevel: 'Very High',
+    crowdStatus: 'Heavy Queue (~30 mins)',
+    rating: 4.89,
+    estYear: 1944,
+    theme: 'Empowerment, Reverence & Ethereal Temple Aesthetics',
+    description: 'Acclaimed Baghbazar organization highlighting social themes alongside intricate handcrafted architectural pavilions that draw massive crowds every year.',
+    highlights: ['Iconic 2024 Social Theme', 'Architectural Grandeur', 'High Emotional Impact', 'Historic North Kolkata'],
+    image: '/images/pujas/sadanga-durgotsav-samity.jpg',
+    bestTimeToVisit: 'Midnight (11:30 PM - 3:00 AM)'
   }
 ];
 

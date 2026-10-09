@@ -52,11 +52,11 @@ const createUserIcon = () => {
 function MapController({ center, zoom, selectedPuja, activeZone }) {
   const map = useMap();
   useEffect(() => {
-    if (selectedPuja && selectedPuja.coords) {
+    if (selectedPuja && selectedPuja.coords && selectedPuja.coords.lat != null && selectedPuja.coords.lng != null) {
       map.flyTo([selectedPuja.coords.lat, selectedPuja.coords.lng], 15, {
         duration: 1.2
       });
-    } else if (center && Array.isArray(center) && center.length === 2) {
+    } else if (center && Array.isArray(center) && center.length === 2 && center[0] != null && center[1] != null) {
       map.flyTo(center, zoom, { duration: 1.2 });
     }
   }, [selectedPuja?.id, activeZone, center?.[0], center?.[1], zoom, map]);
@@ -127,7 +127,7 @@ export default function InteractiveMap({
         <ZoomControl position="bottomright" />
 
         {/* User Location Marker */}
-        {userLocation && (
+        {userLocation && userLocation.lat != null && userLocation.lng != null && (
           <Marker position={[userLocation.lat, userLocation.lng]} icon={createUserIcon()}>
             <Popup>
               <div style={{ padding: '6px' }}>
@@ -141,19 +141,21 @@ export default function InteractiveMap({
         {/* Multi-Route Polylines & Map Badges (Google Maps Style) */}
         {allRoutes && allRoutes.length > 0 && allRoutes.map((route) => {
           const isActive = route.id === activeRouteId;
-          const midPoint = route.path[1] || route.path[0];
+          const midPoint = route.path ? (route.path[1] || route.path[0]) : null;
           return (
             <React.Fragment key={route.id}>
-              <Polyline
-                positions={route.path}
-                pathOptions={{
-                  color: isActive ? '#1a73e8' : '#8ab4f8',
-                  weight: isActive ? 7 : 5,
-                  opacity: isActive ? 0.95 : 0.65,
-                  lineCap: 'round',
-                  lineJoin: 'round'
-                }}
-              />
+              {route.path && (
+                <Polyline
+                  positions={route.path}
+                  pathOptions={{
+                    color: isActive ? '#1a73e8' : '#8ab4f8',
+                    weight: isActive ? 7 : 5,
+                    opacity: isActive ? 0.95 : 0.65,
+                    lineCap: 'round',
+                    lineJoin: 'round'
+                  }}
+                />
+              )}
               {/* Route Duration Badge directly on Map Path */}
               {midPoint && (
                 <Marker
@@ -175,7 +177,7 @@ export default function InteractiveMap({
                         align-items: center;
                         gap: 4px;
                       ">
-                        🚌 ${route.time}
+                        🚌 ${route.time || ''}
                       </div>
                     `,
                     iconSize: [60, 24],
@@ -188,7 +190,8 @@ export default function InteractiveMap({
         })}
 
         {/* Pandal Markers */}
-        {pujas.map((puja) => {
+        {pujas && pujas.map((puja) => {
+          if (!puja || !puja.coords || puja.coords.lat == null || puja.coords.lng == null) return null;
           const isSelected = selectedPuja && selectedPuja.id === puja.id;
           return (
             <Marker
@@ -245,7 +248,7 @@ export default function InteractiveMap({
                       <Navigation size={12} /> Directions
                     </button>
                     <a
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${puja.coords.lat},${puja.coords.lng}`}
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${puja.coords?.lat || 0},${puja.coords?.lng || 0}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{

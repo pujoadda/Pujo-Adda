@@ -102,7 +102,7 @@ export default function PujaDetailModal({ puja, onClose, onDirections }) {
           </div>
 
           {/* Key Highlights */}
-          {puja.highlights && (
+          {puja.highlights && Array.isArray(puja.highlights) && (
             <div>
               <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#38bdf8', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
                 <Award size={18} /> Pandal Highlights

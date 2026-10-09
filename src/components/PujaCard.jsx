@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigation, Star, Train, MapPin, Clock, Flame, Users } from 'lucide-react';
 
 export default function PujaCard({ puja, onDirections, isSelected }) {
+  if (!puja) return null;
   // Helper for crowd status badges
   const getCrowdBadge = (level, statusText) => {
     let badgeClass = 'badge-crowd-moderate';
