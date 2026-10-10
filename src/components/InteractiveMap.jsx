@@ -144,26 +144,21 @@ function MapClickHandler({ onMapClick }) {
 function MapController({ center, zoom, selectedPuja, activeZone, locateSeq, effectiveUserLocation, searchTarget }) {
   const map = useMap();
 
-  // Explicitly fly to searchTarget if selected
+  // Explicitly fly to searchTarget or selected target if provided
   useEffect(() => {
-<<<<<<< HEAD
-    if (selectedPuja && selectedPuja.coords && selectedPuja.coords.lat != null && selectedPuja.coords.lng != null) {
-      map.flyTo([selectedPuja.coords.lat, selectedPuja.coords.lng], 15, {
-        duration: 1.2
-      });
-    } else if (center && Array.isArray(center) && center.length === 2 && center[0] != null && center[1] != null) {
-      map.flyTo(center, zoom, { duration: 1.2 });
-=======
-    if (searchTarget && searchTarget.coords && typeof searchTarget.coords.lat === 'number' && typeof searchTarget.coords.lng === 'number') {
+    const target = searchTarget || selectedPuja;
+    if (target && target.coords && typeof target.coords.lat === 'number' && typeof target.coords.lng === 'number') {
       try {
-        map.flyTo([searchTarget.coords.lat, searchTarget.coords.lng], 16, {
+        map.flyTo([target.coords.lat, target.coords.lng], 16, {
           duration: 1.2
         });
       } catch (err) {
-        console.warn('Map flyTo searchTarget error:', err);
+        console.warn('Map flyTo target error:', err);
       }
+    } else if (center && Array.isArray(center) && center.length === 2 && center[0] != null && center[1] != null) {
+      map.flyTo(center, zoom, { duration: 1.2 });
     }
-  }, [searchTarget, map]);
+  }, [searchTarget, selectedPuja, center, zoom, map]);
 
   // Explicitly fly to user location when locate button is triggered!
   useEffect(() => {
@@ -193,7 +188,6 @@ function MapController({ center, zoom, selectedPuja, activeZone, locateSeq, effe
       } catch (err) {
         console.warn('Map flyTo center error:', err);
       }
->>>>>>> 2b0acd70 (Update Firebase authentication)
     }
   }, [selectedPuja?.id, activeZone, center?.[0], center?.[1], zoom, map]);
 
@@ -527,15 +521,9 @@ export default function InteractiveMap({
           />
         )}
 
-<<<<<<< HEAD
-        {/* User Location Marker */}
-        {userLocation && userLocation.lat != null && userLocation.lng != null && (
-          <Marker position={[userLocation.lat, userLocation.lng]} icon={createUserIcon()}>
-=======
         {/* User GPS / Default Marker */}
-        {effectiveUserLocation && (
+        {effectiveUserLocation && effectiveUserLocation.lat != null && effectiveUserLocation.lng != null && (
           <Marker position={[effectiveUserLocation.lat, effectiveUserLocation.lng]} icon={createUserIcon()}>
->>>>>>> 2b0acd70 (Update Firebase authentication)
             <Popup>
               <div style={{ padding: '6px' }}>
                 <span style={{
@@ -653,7 +641,6 @@ export default function InteractiveMap({
           const midPoint = route.path ? (route.path[1] || route.path[0]) : null;
           return (
             <React.Fragment key={route.id}>
-<<<<<<< HEAD
               {route.path && (
                 <Polyline
                   positions={route.path}
@@ -666,19 +653,6 @@ export default function InteractiveMap({
                   }}
                 />
               )}
-              {/* Route Duration Badge directly on Map Path */}
-=======
-              <Polyline
-                positions={route.path}
-                pathOptions={{
-                  color: isActive ? '#1a73e8' : '#8ab4f8',
-                  weight: isActive ? 7 : 5,
-                  opacity: isActive ? 0.95 : 0.65,
-                  lineCap: 'round',
-                  lineJoin: 'round'
-                }}
-              />
->>>>>>> 2b0acd70 (Update Firebase authentication)
               {midPoint && (
                 <Marker
                   position={midPoint}
