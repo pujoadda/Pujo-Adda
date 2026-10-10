@@ -522,7 +522,7 @@ export default function InteractiveMap({
         )}
 
         {/* User GPS / Default Marker */}
-        {effectiveUserLocation && effectiveUserLocation.lat != null && effectiveUserLocation.lng != null && (
+        {effectiveUserLocation && typeof effectiveUserLocation.lat === 'number' && typeof effectiveUserLocation.lng === 'number' && (
           <Marker position={[effectiveUserLocation.lat, effectiveUserLocation.lng]} icon={createUserIcon()}>
             <Popup>
               <div style={{ padding: '6px' }}>
@@ -641,7 +641,7 @@ export default function InteractiveMap({
           const midPoint = route.path ? (route.path[1] || route.path[0]) : null;
           return (
             <React.Fragment key={route.id}>
-              {route.path && (
+              {route.path && Array.isArray(route.path) && route.path.length > 0 && (
                 <Polyline
                   positions={route.path}
                   pathOptions={{

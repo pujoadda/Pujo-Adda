@@ -5,8 +5,12 @@ import GlobalErrorBoundary from './components/GlobalErrorBoundary.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <GlobalErrorBoundary>
-    <App />
-  </GlobalErrorBoundary>
+  <React.StrictMode>
+    <GlobalErrorBoundary>
+      <App />
+    </GlobalErrorBoundary>
+  </React.StrictMode>
 );
+
+
 
